@@ -54,8 +54,9 @@ def main() -> int:
         return 1
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8").strip()
-    if len(readme.splitlines()) > 6:
-        print("README.md should stay concise.")
+    line_count = len(readme.splitlines())
+    if line_count < 20 or line_count > 120:
+        print("README.md should be useful but not excessive.")
         return 1
 
     print("Skill project validation passed.")
