@@ -1,6 +1,8 @@
 # Research Article Report Skill
 
-一个用于生成中文科研论文阅读报告的 Agent skill。它面向论文 PDF、DOI/arXiv 链接或已提取正文，目标不是写普通摘要，而是生成适合组会、项目调研和复现规划的长文报告。
+AIDD、AI4S、AI4Protein必备skill，不用再为组会讲什么、周报写什么、论文笔记怎么写而发愁，这个skill让你的Agent直接学会如何写一篇博士级的文献阅读报告！
+
+这是一个用于生成中文科研论文阅读报告的 Agent skill。它面向论文 PDF、DOI/arXiv 链接或已提取正文，目标不是写普通摘要，而是生成适合组会、项目调研和复现规划的长文报告。
 
 ## 能做什么
 
