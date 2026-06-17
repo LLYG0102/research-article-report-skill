@@ -1,0 +1,19 @@
+{
+  "name": "research-article-report",
+  "version": "0.2.0",
+  "language": "zh-CN",
+  "description": "A Chinese Agent skill for producing source-grounded research paper reading reports from PDFs, with subfigure-level analysis, reproducibility extraction, computational method summaries, wet-lab validation summaries, and labelled cost estimates.",
+  "entrypoints": [
+    "SKILL.md"
+  ],
+  "tags": [
+    "LLM",
+    "paper-reading",
+    "scientific-report",
+    "reproducibility",
+    "AI-for-Science",
+    "protein-design",
+    "drug-discovery"
+  ],
+  "license": "MIT"
+}

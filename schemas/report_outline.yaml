@@ -1,0 +1,90 @@
+report:
+  title: "《{paper_title}》阅读报告"
+  metadata:
+    required:
+      - paper_title
+      - venue_or_journal
+      - year
+      - doi_or_url
+      - source
+  sections:
+    - id: paper_info
+      title: "论文信息"
+      style: "compact_metadata_block"
+      required: true
+    - id: core_problem
+      title: "文章主要想解决什么问题"
+      style: "continuous_prose"
+      required: true
+      must_cover:
+        - field_background
+        - previous_bottleneck
+        - proposed_route
+        - why_it_matters
+    - id: method_idea
+      title: "方法思想与技术路线"
+      style: "continuous_prose"
+      required: true
+      must_cover:
+        - input_output
+        - data_or_experimental_system
+        - model_or_assay_logic
+        - baseline_or_controls
+        - evaluation_metrics
+    - id: figures
+      title: "逐图阅读"
+      style: "figure_by_figure"
+      required: true
+      requirements:
+        locate_to_subfigure: true
+        explain_each_subfigure:
+          - what_is_shown
+          - readout_meaning
+          - supported_claim
+          - evidence_chain_role
+        examples:
+          - "Fig. 1a"
+          - "Fig. 2b-d"
+          - "Extended Data Fig. 3c"
+    - id: computational_parts
+      title: "文章中所有由计算机完成的部分和重要方法"
+      style: "continuous_prose"
+      required: true
+      must_cover:
+        - data_preprocessing
+        - model_or_algorithm
+        - training_or_inference
+        - ranking_filtering
+        - statistical_analysis
+        - code_data_availability
+    - id: reproducibility
+      title: "复现需要抓住的关键条件"
+      style: "continuous_prose"
+      required: true
+      must_cover:
+        - minimum_reproduction_path
+        - key_parameters_or_thresholds
+        - missing_details
+        - failure_risks
+    - id: wetlab_costs
+      title: "文章中完成的湿实验内容和大致成本估计"
+      style: "bullets_allowed"
+      required: true
+      disclaimer_required: true
+      requirements:
+        use_ranges_not_single_prices: true
+        distinguish_estimate_from_paper_fact: true
+    - id: implications_limitations
+      title: "启发与局限"
+      style: "continuous_prose"
+      required: true
+style:
+  language: "zh-CN"
+  tone: "professional, direct, lab-meeting"
+  bullet_usage: "limited"
+  preserve_english_terms: true
+  avoid_hallucination: true
+  distinguish:
+    - binding_vs_function
+    - prediction_vs_experimental_structure
+    - in_silico_vs_wet_lab_success
